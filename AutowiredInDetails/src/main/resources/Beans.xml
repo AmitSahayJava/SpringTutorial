@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd ">
+
+	<context:annotation-config /> <!-- Used to enable annotations -->
+<!-- If it was a web App then this file has the naming convention as Dispatcher-Servlet.xml -->
+
+<!-- This file contains all the beans(classes) DI Took place using this file -->
+<!-- Spring container creates beans of only those classes which is written here -->
+
+<bean id="dtdc" class="com.sahay.beans.DTDC"></bean>
+<bean id="courier" class="com.sahay.beans.DTDC"></bean> <!-- if it is commented we get error -->
+              <!-- because there are more then one bean of type Courier(I) type -->
+ <bean id="flight" class="com.sahay.beans.FirstFlight"></bean> 
+
+<bean id="filpcart" class="com.sahay.beans.FlipCart"></bean>
+
+
+</beans>
