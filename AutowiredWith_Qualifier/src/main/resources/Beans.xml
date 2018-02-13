@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd ">
+
+	<context:annotation-config /> <!-- Used to enable annotations -->
+
+    <bean id="shop" class="com.sahay.shop.Shop"/>
+      
+    <bean id="apple" class="com.sahay.items.Apple">
+      <property name="price" value="120"/>
+      <property name="importedFrom" value="USA"/>
+    </bean>
+    <bean id="ball" class="com.sahay.items.Ball">
+      <property name="price" value="80"/>
+      <property name="sports" value="Cricket"/>
+    </bean>
+
+</beans>
